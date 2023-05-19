@@ -9,13 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Git credentials
-      env:
-            PAT_TOKEN: "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"
+    - name: Set up SSH key
       run: |
-      
-          git config --global user.email "78910874@qq.com"
-          git config --global user.name "wanshikaimo"
-          git config --global credential.helper store
-          git subtree pull -P packages/BudgetManager  --squash "https://${PAT_TOKEN}@github.com/wanshikaimo/sub.git"
+        mkdir -p ~/.ssh/
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+    - run: git subtree pull -P packages/BudgetManager  --squash git@github.com:wanshikaimo/sub.git master
+
     
