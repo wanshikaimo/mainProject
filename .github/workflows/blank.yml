@@ -19,7 +19,7 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.XIEYU }}
     - run: |
         git remote show origin
-        git subtree pull -P packages/BudgetManager --squash https://github.com/wanshikaimo/sub master
+        git subtree pull -P mainProject/packages/BudgetManager --squash https://github.com/wanshikaimo/sub master
         
 
     
