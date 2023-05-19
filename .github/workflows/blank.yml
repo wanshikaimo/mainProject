@@ -22,6 +22,5 @@ jobs:
           git config  user.name "wanshikaimo"
           git subtree add -P packages/BudgetManager https://github.com/wanshikaimo/sub master --squash
           git subtree pull -P packages/BudgetManager --squash https://github.com/wanshikaimo/sub master
-        
-
+          git push origin <master>
     
