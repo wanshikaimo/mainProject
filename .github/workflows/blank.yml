@@ -12,11 +12,11 @@ jobs:
     - name: Set up SSH key
       run: |
         mkdir -p ~/.ssh/
-        echo "${{ secrets.XIEYU }}" > ~/.ssh/id_rsa
+        echo "${{ secrets.BUDGET }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan ssh-add ~/.ssh/id_rsa
       env:
-        SSH_PRIVATE_KEY: ${{ secrets.XIEYU }}
+        SSH_PRIVATE_KEY: ${{ secrets.BUDGET }}
     - run: |
           git config --global user.email "78910874@qq.com"
           git config --global user.name "wanshikaimo"
