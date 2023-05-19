@@ -13,8 +13,9 @@ jobs:
       env:
             PAT_TOKEN: "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"
       run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Actions"
+      
+          git config --global user.email "78910874@qq.com"
+          git config --global user.name "wanshikaimo"
           git config --global credential.helper store
           git subtree pull -P packages/BudgetManager  --squash "https://${PAT_TOKEN}@github.com/wanshikaimo/sub.git"
     
