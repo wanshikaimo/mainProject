@@ -16,7 +16,7 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan github.com >> ~/.ssh/known_hosts
       env:
-        SSH_PRIVATE_KEY: ${{ secrets.111 }}
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
     - run: git subtree pull -P packages/BudgetManager  --squash git@github.com:wanshikaimo/sub.git master
 
     
