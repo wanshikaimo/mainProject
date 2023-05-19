@@ -8,6 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-#       - name: Pull BudgetManager Subtree
-#         run: git subtree pull -P packages/BudgetManager  --squash git@github.com:wanshikaimo/sub.git master
+    - uses: actions/checkout@v2
+    - run: git subtree pull -P packages/BudgetManager  --squash git@github.com:wanshikaimo/sub.git master
+
+    
