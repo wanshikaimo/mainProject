@@ -17,6 +17,8 @@ jobs:
         ssh-keyscan github.com >> ~/.ssh/known_hosts
       env:
         SSH_PRIVATE_KEY: ${{ secrets.XIEYU }}
-    - run: git subtree pull -P packages/BudgetManager  --squash https://github.com/wanshikaimo/sub master
+    - run: |
+        git subtree add -P packages/BudgetManager --squash https://github.com/wanshikaimo/sub master
+        git subtree pull -P packages/BudgetManager  --squash https://github.com/wanshikaimo/sub master
 
     
