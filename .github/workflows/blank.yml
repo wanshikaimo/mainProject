@@ -18,7 +18,7 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.XIEYU }}
     - run: |
-          git config  user.email "78910874@qq.com"
-          git config  user.name "wanshikaimo"
+          git config --global user.email "78910874@qq.com"
+          git config --global user.name "wanshikaimo"
           git subtree pull -P packages/BudgetManager --squash https://github.com/wanshikaimo/sub master
     
