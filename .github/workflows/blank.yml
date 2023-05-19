@@ -20,5 +20,5 @@ jobs:
     - run: |
           git config --global user.email "78910874@qq.com"
           git config --global user.name "wanshikaimo"
-          git subtree pull -P packages/BudgetManager --squash git@github.com:wanshikaimo/sub.git master
+          git subtree pull -P ../packages/BudgetManager --squash https://github.com/wanshikaimo/sub.git master
     
